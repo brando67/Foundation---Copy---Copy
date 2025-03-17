@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elderly Foundation</title>
+   <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/bg.jpg">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="/images/logo.png" type="image/x-icon"/>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h4>ElderlyFoundation</h4>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="index.html">About Us</a></li>
+                    <li> <a href="index.html">Mission</a></li>
+                    <li> <a href="director.html">Director</a></li>
+                    <li><a class="btn" href="contact.html"><i class="fa fa-envelope"></i>Contact Us
+                    </a></li> 
+                </ul>
+            </div>
+            <button class="hamburger-button">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+            <!--mobile menu-->
+            <div class="mobile-menu">
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="index.html">About Us</a></li>
+                    <li> <a href="index.html">Mission</a></li>
+                    <li> <a href="director.html">Director</a></li>
+                    <li><a class="btn" href="contact.html"><i class="fa fa-envelope"></i>
+                        Contact Us</a></li>  
+                </ul>
+
+            </div>
+           
+        </div>
+    </nav>
+
+    <!--hero-->
+    <div class="hero">
+        <div class="container2">
+            <h1>Bringing Hope and Care to the Elderly</h1>
+            <p>Discover how we're empowering the elderly to live with dignity, respect, and joy. <br>
+                <br>
+            Together We Can Put A Smile On Our GrandParents</p>
+            <a href="#about" class="explore-btn">Explore</a>
+        </div>
+    </div>
+    
+
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>
+            The Elderly Foundation enhances seniors' lives by offering care, resources, and companionship, ensuring they live with dignity and respect. Your support helps create a nurturing and valued community for our Grandparents.
+        </p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="mission">
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to identify and empower the elderly with resources, ensure their well-being, and create a loving and supportive society by bridging challenges with solutions.
+        </p>
+    </section>
+
+     <!-------- impact lives -------->
+     <section class="visits">
+        <div class="visits-header">
+            <h1>Visits Made</h1>
+        </div>
+    
+        <div class="row">
+            <div class="visits-col">
+                <h3>First Visit</h3>
+                <p>We visited an old granny aged 82 years by the name kokop Susan, She lives in timboiywo sub-location Kipkios Villages and she was so happy and Thankful. </p> <br>
+                <h3>Photo</h3>
+                <img src="images/Visit1.png">
+                <h3>Video Preview</h3>
+                <video muted controls src="/images/video preview.mp4" class="video"></video>
+            </div>     
+        </div>
+        
+    </section>
+
+    <section class="blog" id="blog">
+        <h1>
+         Testimonials 
+        </h1>
+        <div class="row">
+         <div class="blog-col">
+             <div><p>Good Work keep doing the good work</p>
+             <h3>Nathal Kibet</h3></div>
+         </div>
+        </div>
+        
+     </section>
+    
+
+    <section class="donation" id="donate">
+        <h1>Support Us</h1>
+        <p>Your generosity makes a difference! Donate today and help us bring hope, care and laughter to the elderly in our society .</p>
+    
+        <div class="donation-card">
+           
+            <h3>Account Information</h3>
+            <button class="amount-btn"> Available: kshs 423 </button>
+            <p><strong>Account:</strong><br>In progress</p>
+            <p><strong>Send Money:</strong><br> +254748890218</p>
+            <p><strong>PayPal: </strong>  <br>brandonkipkoech47@gmail.com</p>
+            <p><strong>Cash/Goods:</strong><br>Call us for collection.</p>
+    
+            <a href="contact.html" class="contact-btn">Contact Us</a>
+        </div>
+    </section>
+
+     <!-------- JavaScript for toggle menu -------->
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    // Toggle menu when clicking the hamburger button
+    hamburgerButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!mobileMenu.contains(event.target) && !hamburgerButton.contains(event.target)) {
+            mobileMenu.classList.remove('active');
+        }
+    });
+
+    // Close menu when clicking a link
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    });
+});
+
+    </script>
+ <footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Elderly Foundation. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://youtube.com/@elderlyfoundation-t3z?si=Jhj5D7RWxCn-0Rw0"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@elderlyfoundation2?_t=ZM-8uB9hseFNLC&_r=1"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+</body>
+</html>
