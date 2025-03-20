@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElderlyFoundation</title>
+<link rel="stylesheet" href="director.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="/images/logo.png" type="image/x-icon"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h4>Elderly Foundation</h4>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="index.html">About Us</a></li>
+                    <li> <a href="index.html">Mission</a></li>
+                    <li> <a href="director.html">Director</a></li>
+                    <li><a class="btn" href="contact.html"><i class="fa fa-envelope"></i>Contact Us
+                    </a></li> 
+                </ul>
+            </div>
+            <button class="hamburger-button">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+            <!--mobile menu-->
+            <div class="mobile-menu">
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="index.html">About Us</a></li>
+                    <li> <a href="index.html">Mission</a></li>
+                    <li> <a href="director.html">Director</a></li>
+                    <li><a class="btn" href="contact.html"><i class="fa fa-envelope"></i>
+                        Contact Us</a></li> 
+                </ul>
+
+            </div>
+           
+        </div>
+    </nav>
+    <div class="container2">
+        <div class="profile-box">
+            <img src="images/developer (2).png" class="profile-pic">
+            <h3>Kipkoech Brandom</h3>
+            <p>Director, Founder & Developer</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/18DQN4cB9x/
+                "><i class="fab fa-facebook"></i></a>
+                <a href="https://youtube.com/@brandykoch-d8g?si=8HNBMnRCQcz3WPpr"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@serenevibes34?_t=ZM-8uBdvCkDAoA&_r=1"><i class="fab fa-tiktok"></i></a>
+                <a href="https://whatsapp.com/dl/"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+            <!-- Learn More Button -->
+<button class="learn-more-btn" onclick="toggleInfo()">Learn more about my profile<i class="fas fa-arrow-down"></i>
+
+</button>
+
+<!-- Hidden Section -->
+<div class="slide-up" id="more-info">
+    <h4>Education Background</h4>
+    <p>- Kabirmoi Pry (2005-2011).<br>- Koyorus Pry (2011-2015). <br>- St Patricks High(2015-2019).<br>- Baraton University(BBIT).  </p>
+
+    <h4>Skills</h4>
+    <ul>
+        <li>- Basic web development.</li>
+        <li>
+            - Graphics design.
+        </li>
+        <li>- IT Support&Laptop Repairs etc.</li>
+         <h4>Contacts</h4>
+         <div class="social-links">
+            <a href="#"><i class="fab fa-phone">  0727261669</i></a>
+         </div>
+         
+        
+    </ul>
+</div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+            </div>
+
+    
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    // Toggle menu when clicking the hamburger button
+    hamburgerButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!mobileMenu.contains(event.target) && !hamburgerButton.contains(event.target)) {
+            mobileMenu.classList.remove('active');
+        }
+    });
+
+    // Close menu when clicking a link
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    });
+});
+function toggleInfo() {
+    const infoBox = document.getElementById("more-info");
+    const arrow = document.querySelector(".learn-more-btn i");
+
+    if (infoBox.style.display === "none" || infoBox.style.display === "") {
+        infoBox.style.display = "block";
+        arrow.style.transform = "rotate(180deg)"; // Flip arrow up
+    } else {
+        infoBox.style.display = "none";
+        arrow.style.transform = "rotate(0deg)"; // Reset arrow
+    }
+}
+
+
+    </script>
+    
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Elderly Foundation. All Rights Reserved.</p>
+           
+        </div>
+    </div>
+</footer>
+
+   
+
+    
+</body>
+</html>
